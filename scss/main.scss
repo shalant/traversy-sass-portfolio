@@ -1,6 +1,5 @@
 @import 'config';
 @import 'menu';
-@import 'mobile';
 
 * {
     box-sizing: border-box;
@@ -17,7 +16,9 @@ body {
 }
 
 // Headings
-h1, h2, h3 {
+h1, 
+h2, 
+h3 {
     margin: 0;
     font-weight: 400;
 
@@ -56,10 +57,10 @@ main {
         margin-top: 1rem;
         a {
             padding: 0.4rem;
+            @include easeOut();  
 
             &:hover {
                 color: $secondary-color;
-                @include easeOut();  
             }
         }
     }
@@ -118,3 +119,5 @@ main {
     color: set-text-color($primary-color);
     height: 60px;
 }
+
+@import 'mobile';
